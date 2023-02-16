@@ -1,0 +1,368 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("images/patt.png");
+}
+
+/* _____________________________ Header Menu ____________________________ */
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row {
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+[class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-1 {
+    flex: 0 0 8.33333%;
+    max-width: 8, 33333%;
+}
+
+.col-2 {
+    flex: 0 0 16, 66667%;
+    max-width: 16, 6666%;
+}
+
+.col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.header {
+    background-color: rgba(255, 255, 255, .75);
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 7px;
+}
+
+.menu {
+    display: flex;
+}
+.arrowDrop {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+
+
+}
+
+
+.menu li {
+    width: 25%;
+    border-left: 1px solid #2c71b8;
+}
+
+.menu li:last-child {
+    border-right: 1px solid #2c71b8;
+}
+
+.textMenu2 {
+    display: block;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 21px;
+    color: #2c71b8;
+    line-height: 50px;
+}
+
+.textMenu1,
+.textMenu {
+    display: block;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 21px;
+    color: #2c71b8;
+    line-height: 50px;
+}
+
+.d-flex {
+    display: flex;
+    width: 270px;
+    height: 40px;
+    margin-top: 5px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #2c71b8;
+    /* color: #2c71b8; */
+    /*     padding-left: 20px; */
+}
+
+.searchText {
+    font-size: 21px;
+    height: 40px;
+    width: 160px;
+    background: transparent;
+    border: none;
+    color: #2c71b8;
+    /*     margin-left: 20px; */
+    padding-left: 20px;
+}
+
+.searchText[type="search"]::-webkit-input-placeholder {
+    color:#2c71b8;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.divCart {
+    height: 50px;
+    width: 50px;
+    /*    border: 1px solid black; */
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    top: -10px;
+    left: 10px;
+}
+
+.counter {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 20px;
+    width: 20px;
+    background-color: #2c71b8;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counterNumber {
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    color: white;
+}
+
+.cart {
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    /*    margin-left: 30px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.shoppingCart {
+    display: block;
+    height: 20px;
+    width: 20px;
+    /*   margin-left: 30px; */
+
+}
+
+.search img {
+    width: 20px;
+    height: 16px;
+    align-items: center;
+    /*     margin-left: 5px; */
+}
+
+.searchIcons {
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    /*     border: 1px solid black; */
+    background-color: #2c71b8;
+}
+
+.menu,
+.SubMenu {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+}
+
+.textMenu1, .textMenu2 {
+    border-color: #2c71b8;
+
+}
+
+
+.SubMenu {
+    flex-direction: column;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    z-index: 2;
+    /*   width: 1px;
+    height: 1px;
+    margin: px; */
+}
+
+.textMenu {
+    display: block;
+    color: white;
+    text-decoration: none;
+    background-color: #2c71b8;
+    width: 285px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: left;
+    padding-left: 30px;
+    /*   padding: 2em; */
+}
+
+.textMenu1:hover {
+    background-color: #2c71b8;
+    color: white;
+}
+
+.menuLi:hover>/* .textMenu1 */ .textMenu2,
+.textMenu1:hover {
+    background-color: #2c71b8;
+    color: white;
+}
+
+.textMenu:hover {
+    background-color: azure;
+    color: #2c71b8;
+}
+
+.menuLi:hover>.SubMenu {
+    clip: auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+
+}
+
+/* ___________________________Slider_________________________ */
+
+
+.slider {
+    height: 400px;
+    width: 100%;
+    /*    border: 1px solid white; */
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    background-color: rgb(0, 0, 0, .20);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /*     align-content: space-between; */
+
+}
+
+.sliderArrowLeft, .sliderArrowRight {
+    padding-top: 170px;
+/* fill: white; */
+
+}
+
+.ArrowLeft {
+    margin-right: 360px;
+    height: 50px;
+    width: 50px;
+    /*    display: flex;
+    align-content: center; */
+}
+
+.ArrowRight {
+    margin-left: 360px;
+    height: 50px;
+    width: 50px;
+    /*     display: flex;
+    align-content: center; */
+}
+
+/* h1 */ .slideText {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: thin;
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.scrollIndicatorContainer {
+    /*     display: flex;
+    justify-content: flex-start;
+    flex-direction: row; */
+    position: absolute;
+    top: 360px;
+
+
+}
+
+
+.scrollIndicator1,
+.scrollIndicator2,
+.scrollIndicator3,
+.scrollIndicator4 {
+    height: 10px;
+    width: 10px;
+    border: 2px solid white;
+    margin-left: 10px;
+    display: inline-block;
+
+}
+
+.scrollIndicator3 {
+    background-color: white;
+}
+
+/* _____________________  Section goods _________________________________ */
+
+.goods {
+    width: 100%;
+    height: 2000px;
+    display: flex;
+    justify-content: center;
+}
+
+.goodsContainer {
+    border: 1px solid black;
+    width: 1200px;
+
+}
+.characteristics {
+    height: 844px;
+    width: 270px;
+    border: 1px solid black;
+    margin: 0px 15px 0px 15px;
+    background-color: rgb(255, 255, 255, .20);
+
+}
